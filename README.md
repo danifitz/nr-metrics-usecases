@@ -28,13 +28,16 @@ Prometheus is a popular open-source metrics and alerting solution that features 
 However there are some challenges that arise from using Prometheus. These can be summarised as Scaling, Silos and Context-switching.
 
 * Scaling
+  
 As more and more metrics are generated and alerts configured, teams need to find a way to scale Prometheus to cope with the demand. This can involve complex sharding or running multiple Prometheus instances per team. This costs in terms of infrastructure resources and human resources to implement. Some companies turn to hosted solutions to allow them to reduce this complexity, at the cost of paying a vendor.
 
 * Silos
+  
 In a typical company, you tend to see many Prometheus instances in use, perhaps by team or by department. The problem with this is that in an incident that cuts across teams or departments, SRE's lack the ability to query across these data silos to pinpoint the issue. Furthermore it makes it much harder to Business Intelligence (BI), long-term reporting and cross company dashboards.
 
 * Context-switching
-Metrics are just one of the [three](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html) ([some say four(https://newrelic.com/platform/telemetry-data-101/)]) pillars of Observability.
+  
+Metrics are just one of the [three](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033431/ch04.html) (<a href="https://newrelic.com/platform/telemetry-data-101/">some say four</a>) pillars of Observability.
 
 At New Relic we believe there is considerable benefit to having all of Observability data (Metrics, Events, Logs and Traces) in a single platform. You can benefit from economies of scale, build skills in a single platform, break down data silos and fix issues faster by preventing context-switching between different tools to diagnose a single issue. This problem is not unique to Prometheus, but if you are using a different tool to store and query each of the different telemetry types, you are wasting precious time when you could be focussing on restoring service to your customers.
 
